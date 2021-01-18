@@ -33,16 +33,29 @@
        }
 
        ### Returning Methods
-
+      ## Test
+      ## Test
        list(set = set, get = get,
                setInverse = setInverse,
                getInverse = getInverse)
        }
 
-
-## Write a short comment describing this function
-
        cacheSolve <- function(x, ...) {
+               ## Return a matrix that is the inverse of 'x'
 
-       ## Return a matrix that is the inverse of 'x'
-       }
+               ### Assing value
+               matrix_inv <- x$getInverse()
+
+               ### Evaluating
+               if(!is.null(matrix_inv)){
+               ### Debug / Trace
+               message("getting cached data")
+               return(matrix_inv)
+               }
+
+               data <- x$get() # Read
+               matrix_inv <- solve(data) # Set
+               x$setInverse(matrix_inv) # Cache
+               matrix_inv # Return
+               }
+
