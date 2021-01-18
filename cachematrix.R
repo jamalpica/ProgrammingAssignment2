@@ -59,3 +59,6 @@
                matrix_inv # Return
                }
 
+
+
+       ## {\displaystyle I_{m}A=AI_{n}=A.}
